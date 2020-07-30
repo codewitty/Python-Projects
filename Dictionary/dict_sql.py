@@ -1,7 +1,17 @@
 import json
+import mysql.connector
 from difflib import get_close_matches
 
-data = json.load(open("data.json"))
+con = mysql.connector.connect(
+user = "ardit700_student",
+password = "ardit700_student",
+host = "108.167.140.122",
+database = "ardit700_pm1database"
+)
+
+cursor = con.cursor()
+
+#data = json.load(open("data.json"))
 
 def getMeaning(w):
 	wl = w.lower()
@@ -25,8 +35,11 @@ def getMeaning(w):
 
 word = input("Enter word: ")
 
-if type(output) == list:
-	for item in output:
-		print(item)
+query = cursor.execute("SELECT Definition FROM Dictionary WHERE Expression = '%s'" % word)
+results = cursor.fetchall()
+
+if results:
+	for result in results:
+		print(f'{result[0]}')
 else:
-	print(output)
+	print(f'{getMeaning(word)}')
