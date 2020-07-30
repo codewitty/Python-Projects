@@ -23,10 +23,16 @@ def getMeaning(w):
 	else:
 		return (f'No matching word found in dictionary.')
 
-word = input("Enter word: ")
+def main():
+	word = input("Enter word: ")
 
-if type(output) == list:
-	for item in output:
-		print(item)
-else:
-	print(output)
+	output = getMeaning(word)
+
+	if type(output) == list:
+		for item in output:
+			print(item)
+	else:
+		print(output)
+
+if __name__ == '__main__':
+    main()
