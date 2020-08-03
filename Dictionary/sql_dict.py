@@ -35,6 +35,7 @@ def getMeaning(w):
 
 word = input("Enter word: ")
 
+# Query the database
 query = cursor.execute("SELECT Definition FROM Dictionary WHERE Expression = '%s'" % word)
 results = cursor.fetchall()
 
