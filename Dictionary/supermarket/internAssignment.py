@@ -12,6 +12,7 @@ states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
           "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+nation = "US"
 
 '''
 This function accepts the input from the user and formats it according
@@ -33,7 +34,7 @@ def getOutput(expr):
     for word in out:
         if word in states:
             frame["state"] = word
-        elif word == "US":
+        elif word == nation:
             frame["country"] = word
         elif word.isdigit():
             frame["ph no"] = word
