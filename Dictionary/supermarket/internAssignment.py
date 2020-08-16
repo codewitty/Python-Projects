@@ -2,7 +2,7 @@
 # Demonstrates how to sort input into given categories using
 # python.
 #
-# Joshua Gomes
+# Joshua N, Gomes
 # -----------------------------------------------------------
 import string
 
