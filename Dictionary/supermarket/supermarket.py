@@ -22,15 +22,19 @@ print(df6.shape[1])
 
 
 nom = ArcGIS()
-n = nom.geocode("3995 23rd Street, San Francisco, CA 94114")
-print (n.latitude, n.longitude)
+#n = nom.geocode("3995 23rd Street, San Francisco, CA 94114")
+#print (n.latitude, n.longitude)
 
 # Use DataFrame to pass addresses to geoLocator
 
 df1["Address"] = df1["Address"] + " , " + df1["City"] + " , " + df1["State"] + " , " + df1["Country"]
-
 print(df1)
 
 # Gecode each row
 
 df1["Co-ordinates"] = df1["Address"].apply(nom.geocode)
+print(df1)
+
+# Using a Lambda to get Latitude Column
+
+df1["Latitude"] = df1["Co-ordinates"].apply(lambda x: x.latitude if x != None else None)
