@@ -24,4 +24,13 @@ print(df6.shape[1])
 nom = ArcGIS()
 n = nom.geocode("3995 23rd Street, San Francisco, CA 94114")
 print (n.latitude, n.longitude)
-print(f'{n}')
+
+# Use DataFrame to pass addresses to geoLocator
+
+df1["Address"] = df1["Address"] + " , " + df1["City"] + " , " + df1["State"] + " , " + df1["Country"]
+
+print(df1)
+
+# Gecode each row
+
+df1["Co-ordinates"] = df1["Address"].apply(nom.geocode)
