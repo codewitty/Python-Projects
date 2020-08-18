@@ -19,3 +19,9 @@ print(type(df6))
 print(df6.shape)
 print(df6.shape[0])
 print(df6.shape[1])
+
+
+nom = ArcGIS()
+n = nom.geocode("3995 23rd Street, San Francisco, CA 94114")
+print (n.latitude, n.longitude)
+print(f'{n}')
