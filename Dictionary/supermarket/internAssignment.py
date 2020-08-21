@@ -1,8 +1,9 @@
 # -----------------------------------------------------------
 # Demonstrates how to sort input into given categories using
 # python.
-#
+# 
 # Joshua N, Gomes
+# 
 # -----------------------------------------------------------
 import string
 
