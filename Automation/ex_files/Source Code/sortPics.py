@@ -3,9 +3,8 @@ from pathlib import Path
 SUBDIRECTORIES = {
     "jpeg": ['.jpg','.jpeg'],
     "RAW":['.CR2','.CR3','.dng'],
-    "VIDEOS": ['.mov','.avi','.mp4'],
-    "IMAGES": ['.jpg','.jpeg','.png']
 }
+
 def pickDirectory(value):
     for category, suffixes in SUBDIRECTORIES.items():
         for suffix in suffixes:
