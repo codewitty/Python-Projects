@@ -3,8 +3,8 @@ from pathlib import Path
 from collections import Counter
 
 SUBDIRECTORIES = {
-    "jpeg": ['.jpg','.jpeg'],
-    "RAW":['.CR2','.CR3','.dng'],
+    "jpeg": ['.JPG','.jpg'],
+    "RAW":['.CR2','.CR3','.dng','.cr3'],
 }
 
 jpegList = []
@@ -22,27 +22,22 @@ def createFileList(path,emptyList):
     for item in os.scandir(path):
         if item.is_dir():
             continue
-        filePath = Path(item)
-        filetype = filePath.suffix.lower()
         name = item.name
-        if filetype in name:
-            new_name = name.replace(filetype,'')
+        new_name = name[:-4]
         print(new_name)
         emptyList.append(new_name)
 
 
 def deleteFile(rawPath,rawList,jpegList):
     res = list((Counter(rawList) - Counter(jpegList)).elements()) 
+    print(res)
     for item in os.scandir(rawPath):
         if item.is_dir():
             continue
-        filePath = Path(item)
-        filetype = filePath.suffix.lower()
         name = item.name
-        if filetype in name:
-            new_name = name.replace(filetype,'')
-        if new_name in res:
-            print(new_name)
+        raw_name = name[:-4]
+        if raw_name in res:
+            os.remove(item)
     
 
 def organizeDirectory():
@@ -57,13 +52,14 @@ def organizeDirectory():
             directoryPath.mkdir()
         filePath.rename(directoryPath.joinpath(filePath))
 
-#organizeDirectory()
-
+path = input("Enter source path\n")
+organizeDirectory(path)
+"""
 jpegPath = input("Enter jpeg path\n")
-createFileList(path, jpegList)
+createFileList(jpegPath, jpegList)
 rawPath = input("Enter raw path\n")
-createFileList(path, rawList)
+createFileList(rawPath, rawList)
 print(rawList)
 print(jpegList)
 deleteFile(rawPath,rawList,jpegList)
-
+"""
