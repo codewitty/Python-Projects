@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from collections import Counter
 
 SUBDIRECTORIES = {
     "jpeg": ['.jpg','.jpeg'],
@@ -19,7 +18,7 @@ def pickDirectory(value):
 
 
 def createFileList(path,emptyList):
-    for item in os.scandir(path):
+    for item in os.scandir():
         if item.is_dir():
             continue
         filePath = Path(item)
@@ -29,22 +28,15 @@ def createFileList(path,emptyList):
             new_name = name.replace(filetype,'')
         print(new_name)
         emptyList.append(new_name)
+    print(emptyList)
 
 
-def deleteFile(rawPath,rawList,jpegList):
-    res = list((Counter(rawList) - Counter(jpegList)).elements()) 
-    for item in os.scandir(rawPath):
-        if item.is_dir():
-            continue
-        filePath = Path(item)
-        filetype = filePath.suffix.lower()
-        name = item.name
-        if filetype in name:
-            new_name = name.replace(filetype,'')
-        if new_name in res:
-            print(new_name)
     
 
+
+
+
+"""
 def organizeDirectory():
     for item in os.scandir():
         if item.is_dir():
@@ -57,13 +49,7 @@ def organizeDirectory():
             directoryPath.mkdir()
         filePath.rename(directoryPath.joinpath(filePath))
 
-#organizeDirectory()
+organizeDirectory()
+"""
 
-jpegPath = input("Enter jpeg path\n")
-createFileList(path, jpegList)
-rawPath = input("Enter raw path\n")
-createFileList(path, rawList)
-print(rawList)
-print(jpegList)
-deleteFile(rawPath,rawList,jpegList)
-
+createFileList(jpegList)
