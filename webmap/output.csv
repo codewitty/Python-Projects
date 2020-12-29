@@ -1,3 +1,4 @@
+Park Name,Latitude,Longitude
 "Offshore Trap/Pot Waters Area, Western Atlantic Ocean, the US",38.000000,-82.000000
 "Steller Sea Lion Protection Area, AL, the US",57.466667,-153.433334
 "Pacific Remote Islands Marine National Monument, the US",16.736944,-169.523895
@@ -24,7 +25,6 @@
 "Bear Butte State Park, Sturgis, SD, USA",44.475296,-103.424309
 "Okefenokee National Wildlife Refuge, Folkston, GA, USA",30.773230,-82.292732
 "Denali National Park and Preserve, Alaska, USA",63.129887,-151.197418
-"Acadia National Park, Maine, USA",44.338974,-68.273430
 "Topanga State Park, Topanga, CA, USA",34.093182,-118.587318
 "Gates of the Arctic National Park and Preserve, AK, USA",67.915199,-153.463730
 "Kaloko-Honokōhau National Historical Park, Kailua-Kona, HI, USA",19.678328,-156.020477
@@ -32,7 +32,6 @@
 "Whiskeytown National Recreation Area, Whiskeytown, CA, USA",40.633495,-122.564247
 "Mesa Verde National Park, Mesa Verde, CO, USA",37.230873,-108.461838
 "Arches National Park, Utah, USA",38.733082,-109.592514
-"Mount Rainier National Park, Washington, USA",46.879967,-121.726906
 "Kenai Fjords National Park, Alaska, USA",60.043777,-149.816360
 "Anahuac National Wildlife Refuge, Anahuac, TX, USA",29.610300,-94.449081
 "Bandelier National Monument, Los Alamos, NM, USA",35.767288,-106.311607
@@ -40,7 +39,10 @@
 "Yellowstone National Park, WY, USA",44.427895,-110.588379
 "Rothrock State Forest, State College, PA, USA",40.720585,-77.826965
 "Great Smoky Mountains National Park, Tennessee, USA",35.611763,-83.489548
+"Mount Rainier National Park, Washington, USA",46.879967,-121.726906
 "Zion National Park, Utah, USA",37.317207,-113.022537
+"Minute Man National Historical Park,MA,USA",42.44908989007931, -71.26945294900946 
+"Acadia National Park, Maine, USA",44.338974,-68.273430
 "Yosemite National Park, California, USA",37.865101,-119.538330
 "Yellowstone National Park, Wyoming, USA",44.429764,-110.584663
 "Haleakalā National Park, Hawaii, USA",20.701283,-156.173325
