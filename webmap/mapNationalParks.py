@@ -1,7 +1,6 @@
 import folium
 import pandas
 
-#maps = folium.Map(location=[37.5, -122], zoom_start=4, tiles="Stamen Terrain")
 maps = folium.Map(location=[46.8797, -110.3626], zoom_start=4, tiles="Stamen Terrain")
 
 fg = folium.FeatureGroup(name="My map")
@@ -26,11 +25,11 @@ lng = list(data["Longitude"])
 name = list(data["Name of Park"])
 done_list = ["Yosemite", "Mount Rainier", "Zion", "Acadia"]
 
-for lt, ln, nm in zip(lat,lng,name):
-    if nm in done_list:
-        fg.add_child(folium.Marker(location=[lt,ln], popup=nm, icon=folium.Icon(color='orange')))
+for lt, ln, names in zip(lat,lng,name):
+    if names in done_list:
+        fg.add_child(folium.Marker(location=[lt,ln], popup=names + " National Park", icon=folium.Icon(color='orange')))
     else:
-        fg.add_child(folium.Marker(location=[lt,ln], popup=nm, icon=folium.Icon(color='blue')))
+        fg.add_child(folium.Marker(location=[lt,ln], popup=names + " National Park", icon=folium.Icon(color='blue')))
     
 maps.add_child(fg)
 
