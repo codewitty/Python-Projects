@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Joshua Gomes</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}"./styles.css")}">
+</head>
+
+<body>
+  <div class="top-container">
+    <img class="top-cloud" src="cloud.png" alt="cloud-image">
+    <h1> I'm Joshua.</h1>
+    <h2>A Programmer. </h2>
+    <img class="bottom-cloud" src="cloud.png" alt="cloud-image">
+    <img class="ducky" src="MyRubberDucky.jpeg" alt="mountain-image">
+  </div>
+
+  <div class="container">
+      <ul class="menu">
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+  </div>
+  <div class="container">
+    {%block content%}
+    {%endblock%}
+  </div>
+  <div class="middle-container">
+    <div class="profile">
+      <img class="profile_pic" src="35624908.png" alt="">
+      <h2>Hello.</h2>
+      <p class="intro">I started my professional career as an Officer in the Merchant Navy.
+        <br>After travelling all over the world and having
+        myriad experiences and adventures at sea, I wanted to explore my creative side.
+        <br>Computers have always fascinated me, and the problems being solved by programmers all over the world amazed me. <br>I decided to become a programmer and build
+        something that could one day change the world for the better.</p>
+    </div>
+    <hr>
+  </div>
+
+  <div class="skills">
+    <h2>My Skills.</h2>
+    <div class="skill-row">
+<!--
+      <div class="card-panel waves-effect waves-orange z-depth-1 hoverable" <span class="flow-text">
+        <img id="symbol" src="C.png" class="circle responsive-img" style="opacity: 1;">
+        <p class="flow-text">C</p>
+        </span>
+      </div>
+      <div class="grid">
+        <div class="card card__one">
+          <figure class="card__img">
+            <img src="https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg" width="340" height="280" />
+          </figure>
+          <div class="card__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.
+          </div>
+        </div>
+      </div>
+        <h3>Programming Languages</h3>
+        <p>
+          <img class="symbol" src="C.png" alt="C-programming">
+          <br>
+          Project-
+          <br>Built and implemented my own C Library.
+          <a class="repo-link" href="https://github.com/codewitty/Cadet/tree/master/libft"> Check it Out!</a>
+        </p>
+        <p>
+          <img class="symbol" src="C++.png" alt="C++-programming">
+          <br>
+          Linked Lists. Data Structures.
+          Search and Sort Algorithms.
+          File Handling.
+          Linked Lists
+        </p>
+
+        <h3>Web Development</h3>
+        <p>
+          <h4>Front-End</h4>
+          <img class="symbol" src="HTML.png" alt="HTML-programming">
+          <img class="symbol" src="CSS.png" alt="CSS-programming">
+          <img class="symbol" src="JS.png" alt="JavaScript-programming">
+
+          <img class="symbol" src="GIT.png" alt="GIT-programming">
+          <br>Experience with deploying applications to static CDN servers along
+          with associated concerns like versions, assets and bundling
+          for performance.
+        </p>
+        <p>
+          <h4>Back-End</h4>
+          <img class="symbol" src="React.png" alt="React-programming">
+          <img class="symbol" src="MongoDB.png" alt="MongoDB-programming">
+          <img class="symbol" src="NodeJS.png" alt="NodeJS-programming">
+          <img class="symbol" src="Rest.png" alt="Rest-programming">
+          <img class="symbol" src="SQL.png" alt="SQL-programming"> <br>
+
+        </p>
+      </div>
+      <hr>
+    </div>
+
+    <div class="contact-me">
+      <h2>Get In Touch</h2>
+      <h3>Internships</h3>
+      <p>Im currently looking for a Software Development internship.</p>
+      <div class="button-ctct"><a class="butn" href="ContactMe.html">CONTACT ME</a></div>
+      <div class="button-ctct"><a class="butn" href="Joshua_Gomes_Resume.pdf">RESUME</a></div>
+      <hr>
+    </div>
+
+  </div>
+
+
+  <div class="bottom-container">
+    <p class="links">
+      <a class="footer-link" href="https://www.linkedin.com/in/codewitty/">LinkedIn</a>
+      <a class="footer-link" href="https://github.com/codewitty">Github</a>
+      <a class="footer-link" href="https://www.instagram.com/drawntowildplaces/">Instagram</a></p>
+    <p class="copyright">© 2019 Joshua Gomes.</p>
+  </div>
+
+    <table style="color: black" border="0" cellpadding="0" cellspacing="2">
+      <tr>
+        <td bgcolor="#eeeeee">
+          <div align="center"> Enneagram Test Results <table style="color: black; background: #dddddd" border="0" cellpadding="0" cellspacing="4" bgcolor="#dddddd">
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type1.html">Type 1 </a></td>
+                <td>Orderliness</td>
+                <td width="50"> ||||||||||||||||</td>
+                <td width="30">70%</td>
+              </tr>
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type2.html">Type 2</a></td>
+                <td> Helpfulness</td>
+                <td width="50"></td>
+                <td width="30">46%</td>
+              </tr>
+              <tr>
+                <td> <a href="http://similarminds.com/enneagram/type3.html">Type 3</a></td>
+                <td> Image Focus</td>
+                <td width="50"> ||||||||||||||||</td>
+                <td width="30"> 62%</td>
+              </tr>
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type4.html">Type 4</a></td>
+                <td>Individualism</td>
+                <td width="50"> ||||||||||||</td>
+                <td width="30"> 42%</td>
+              </tr>
+              <tr>
+                <td> <a href="http://similarminds.com/enneagram/type5.html">Type 5</a></td>
+                <td> Intellectualism</td>
+                <td width="50"> ||||||||||||||||||</td>
+                <td width="30"> 74%</td>
+              </tr>
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type6.html">Type 6</a></td>
+                <td>Security Focus</td>
+                <td width="50"> ||||||||||||||||||</td>
+                <td width="30"> 74%</td>
+              </tr>
+              <tr>
+                <td> <a href="http://similarminds.com/enneagram/type7.html">Type 7</a></td>
+                <td> Adventurousness</td>
+                <td width="50"> ||||||||||||||</td>
+                <td width="30"> 54%</td>
+              </tr>
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type8.html"> Type 8</a></td>
+                <td>Aggressiveness</td>
+                <td width="50"> ||||||||||||||||||||</td>
+                <td width="30"> 90%</td>
+              </tr>
+              <tr>
+                <td><a href="http://similarminds.com/enneagram/type9.html"> Type 9</a></td>
+                <td>Calmness</td>
+                <td width="50">||||||||||||||||</td>
+                <td width="30"> 66%</td>
+              </tr>
+            </table> Your main type is <b> 8</b> <br> Your variant is <b> sexual</b> </div>
+        </td>
+      </tr>
+    </table> <a href="http://similarminds.com/test.html">Take Free Enneagram Personality Test</a><br>
+    <font size="1"><a href="http://similarminds.com/personality_tests.html">Personality Test</a> by <a href="http://similarminds.com/">SimilarMinds.com</a></font>
+  </div>
+-->
+
+
+</body>
+
+</html>
