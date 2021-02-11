@@ -46,5 +46,4 @@ for lt, ln, names in zip(lat,lng,name):
 maps.add_child(folio_group)
 maps.add_child(folium.LayerControl())
 
-maps.save("SC.html")
-
+maps.save("NationalParksMap.html")
