@@ -100,7 +100,6 @@ h4 {
 }
 
 .bottom-container {
-  /*background-color: #7098da;*/
   background-color: #f7f4e9;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -152,6 +151,13 @@ h4 {
 .repo-link{
   font-size: 1.2rem;
   font-weight: bold;
+  color: #2d3561;
+}
+
+.footer-link{
+  font-size: 1.0rem; 
+  font-weight: bold;
+  text-decoration: underline;
   color: #2d3561;
 }
 
