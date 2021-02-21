@@ -1,16 +1,25 @@
 from bokeh.plotting import figure
 from bokeh.io import output_file, show
+import pandas
 
-# fake data
-x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-y = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+df = pandas.read_csv("data.csv")
+x = df["Month"]
+y = df["PushUps"]
 
 output_file("line.html")
 
 # figure object
-f = figure()
+p = figure(plot_width=1200,plot_height=800, tools='pan')
+p.title.text="Cool Data"
+p.title.text_color="Gray"
+p.title.text_font="times"
+p.title.text_font_style="bold"
+p.xaxis.minor_tick_line_color=None
+p.yaxis.minor_tick_line_color=None
+p.xaxis.axis_label="Month"
+p.yaxis.axis_label="No of Pushups"
 
 # line plot
-f.line(x,y)
+p.line(x,y)
 
-show (f)
+show (p)
