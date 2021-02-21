@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  text-align: center;
   font-family: 'Amiri', serif;
   color: #40514E;
+  text-align: center;
 }
-
 
 a {
   text-decoration: none;
@@ -15,12 +14,41 @@ a {
 
 a:hover {
   color: #800000;
-  /*color: #0c084c;*/
 }
 
 p {
   line-height: 2;
   margin: 0px auto;
+}
+
+/*
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+*/
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: white;
+}
+
+.progress-bar {
+  height: 3px;
+  /*background: #4caf50;*/
+  /*background: #FFD700;*/
+  background: #DE1768;
+  width: 0%;
 }
 
 hr {
@@ -62,6 +90,11 @@ h4 {
   margin: 0px auto;
 }
 
+.hello-world{
+    position: relative;
+    left: 30px;
+}
+
 .skill-row {
   width: 60%;
   margin: 100px auto 100px auto;
@@ -77,8 +110,15 @@ h4 {
   font-size: 2.5rem;
 }
 
-.middle-container {
+.about-me {
   background-color: #90f2ff;
+  /*background-color: #c05c7e;*/
+  font-size: 1.5rem;
+  padding: 100px 0;
+}
+
+.middle-container {
+  background-color: white;
   /*background-color: #c05c7e;*/
   font-size: 1.5rem;
   padding: 100px 0;
@@ -93,8 +133,9 @@ h4 {
 }
 
 .contact-me {
-  background-color: #90f2ff;
+  /*background-color: #90f2ff;*/
   /*background-color: #ffb961;*/
+  background-color: #ffffff;
   font-size: 1.5rem;
   padding: 100px 0;
 }
@@ -113,6 +154,10 @@ h4 {
 }
 
 .button-ctct {
+  margin-top: 50px;
+}
+
+.social-container {
   margin-top: 50px;
 }
 
@@ -159,6 +204,29 @@ h4 {
   font-weight: bold;
   text-decoration: underline;
   color: #2d3561;
+}
+
+.row{
+    font-family: Fira Sans,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.project {
+  height: 80%;
+  width: 80%;
+  border-radius: 100%;
+  object-fit: contain
 }
 
 .profile_pic {
@@ -212,3 +280,72 @@ h4 {
   margin-left: auto auto 50px 30px;
 }
 
+ @keyframes TransitioningBackground {
+	 0% {
+		 background-position: 1% 0%;
+	}
+	 50% {
+		 background-position: 99% 100%;
+	}
+	 100% {
+		 background-position: 1% 0%;
+	}
+}
+ .resume-button {
+     font-size: 20px;
+	 font-weight: 600;
+     font-family: 'Noto Sans TC', sans-serif;
+     padding: 10px 20px 10px 20px;
+     text-decoration: none;
+     margin-top: 50px;
+	 color: white;
+	 text-align: center;
+	 width: 200px;
+	 height: 60px;
+	 border-radius: 10px;
+	 position: relative;
+	 overflow: hidden;
+	 background-image: linear-gradient(270deg, #8e9ac2, #42579a);
+	 background-size: 400% 400%;
+	 animation: TransitioningBackground 10s ease infinite;
+	 transition: 0.6s;
+     background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+     background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+     background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+     background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+     background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+     -webkit-border-radius: 10;
+     -moz-border-radius: 10;
+     border-radius: 10px;
+}
+ .resume-button::before {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 background: rgba(255, 255, 255, 0.5);
+	 width: 60px;
+	 height: 100%;
+	 top: 0;
+	 filter: blur(30px);
+	 transform: translateX(-100px) skewX(-15deg);
+}
+ .resume-button::after {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 background: rgba(255, 255, 255, 0.2);
+	 width: 30px;
+	 height: 100%;
+	 top: 0;
+	 filter: blur(5px);
+	 transform: translateX(-100px) skewX(-15deg);
+}
+ .resume-button:hover {
+	 background-image: linear-gradient(to left, #2d8fe5, #d155b8);
+	 transform: scale(1.2);
+	 cursor: pointer;
+}
+ .resume-button:hover::before, .subscribe-button:hover::after {
+	 transform: translateX(300px) skewX(-15deg);
+	 transition: 0.7s;
+}

@@ -1,11 +1,22 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, make_response
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
+    resp = make_response('Hello, World!')
+    # Set a same-site cookie for first-party contexts
+    resp.set_cookie('cookie1', 'value1', samesite='Lax')
+    # Set a cross-site cookie for third-party contexts
+    resp.set_cookie('cookie2', 'value2', samesite='None', secure=True)
     return render_template("index.html")
+
+"""
+@app.route('/')
+def home():
+    return render_template("index.html")
+"""
 
 @app.route('/contact/')
 def contact():

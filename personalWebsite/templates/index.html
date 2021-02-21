@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <title> Portfolio | Joshua Gomes</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <link href="https://fonts.googleapis.com/css?family=Amiri|Noto+Sans+TC|Rochester" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  -->
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
@@ -23,8 +24,14 @@
 </head>
 
 <body>
+  <div class="header">
+    <div class="progress-container">
+     <div class="progress-bar" id="myBar"></div>
+    </div>
+  </div>
   <div class="top-container">
     <img class="top-cloud" src="{{url_for('static', filename='cloud.png')}}" alt="cloud-image">
+    <h3 class=hello-world> Hello, World!</h3>
     <h1> I'm Joshua.</h1>
     <h2>A Programmer. </h2>
     <img class="bottom-cloud" src="{{url_for('static', filename='cloud.png')}}" alt="cloud-image">
@@ -32,17 +39,29 @@
   </div>
 
   <div class="middle-container">
-    <div class="profile">
-      <img class="profile_pic" src="{{url_for('static', filename='35624908.png')}}" alt="">
-      <h2>Hello.</h2>
-      <p class="intro">I started my professional career as an Officer in the Merchant Navy.
-        <br>After travelling all over the world and having
-        myriad experiences and adventures at sea, I wanted to explore my creative side.
-        <br>Computers have always fascinated me, and the problems being solved by programmers all over the world amazed me. <br>I decided to become a programmer and build
-        something that could one day change the world for the better.</p>
+    <div class="project1">
+      <h2>Genome Explorer</h2>
+      <img class="project" src="{{url_for('static', filename='project1.png')}}" alt="cloud-image">
+      <p class="intro">My team and I built a project that consisted of using multiple data structures to access the same set of data to manipulate it using different characteristics.
+        <br>We used a Linked List, Binary Search Tree, 2-3Tree and a Hash Table to sort data for Genome Assemblies.
     </div>
     <hr>
   </div>
+
+  <div class="row justify-content-lg-between align-items-center pb-5 pb-lg-6">
+                <div class="col-lg-5 order-lg-2 mb-2 mb-lg-0">
+                    <h2 class="h3 font-weight-normal">Genome Explorer</h2>
+                    <p class="font-weight-light text-light">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <a href="project1">
+                        <figure class="img-overlay">
+                            <img class="border-dark img-thumbnail" src="{{url_for('static', filename='project1.png')}}" alt="cloud-image">
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </div>
 
   <div class="skills">
     <h2>My Skills.</h2>
@@ -83,50 +102,81 @@
       <hr>
     </div>
 
+  <div class="about-me">
+    <div class="profile">
+      <img class="profile_pic" src="{{url_for('static', filename='35624908.png')}}" alt="">
+      <h2>Hello.</h2>
+      <p class="intro">I started my professional career as an Officer in the Merchant Navy.
+        <br>After travelling all over the world and having
+        myriad experiences and adventures at sea, I wanted to explore my creative side.
+        <br>Computers have always fascinated me, and the problems being solved by programmers all over the world amazed me. <br>I decided to become a programmer and build
+        something that could one day change the world for the better.</p>
+    </div>
+    <hr>
+  </div>
+
     <div class="contact-me">
       <h2>Get In Touch</h2>
       <h3>Internships</h3>
-      <p>Im currently looking for a Software Development internship.</p>
-      <div class="button-ctct"><a class="butn" href="/contact">CONTACT ME</a></div>
-      <div class="button-ctct"><a class="butn" href="{{ url_for('static', filename='Joshua_Gomes_Resume.pdf') }}">RESUME</a></div>
-      <div class="button-ctct"><a class="butn" href="/np">National Parks</a></div>
-      <hr>
-    </div>
+      <p>I'm currently looking for a Software Development internship.</p>
+      <div class="button-ctct"><a class="resume-button" href="{{ url_for('static', filename='Joshua_Gomes_Resume.pdf') }}">RESUME</a></div>
+      <div class="button-ctct"><a class="resume-button" href="/np">National Parks</a></div>
+      <h3>Social</h3>
+      <br>
+      <div id="social_container" style="white-space:nowrap">
 
+      <div id="social_image" style="display:inline;">
+          <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+      </div>
+
+      <div id="footer-link" style="display:inline; white-space:nowrap;">
+        <a class="footer-link" href="https://www.linkedin.com/in/codewitty/">LinkedIn</a>
+      </div>
+      <br>
+
+      <div id="social_image" style="display:inline;">
+          <i class="fa fa-github" style="font-size:24px"></i>
+      </div>
+
+      <div id="footer-link" style="display:inline; white-space:nowrap;">
+        <a class="footer-link" href="https://github.com/codewitty">Github</a>
+      </div>
+      <br>
+
+      <div id="social_image" style="display:inline;">
+          <i class="fa fa-envelope" style="font-size:24px"></i>
+      </div>
+
+      <div id="footer-link" style="display:inline; white-space:nowrap;">
+        <a class="footer-link" href="">gomesjoshua@gmail.com</a>
+      </div>
+      <br>
+
+      <div id="social_image" style="display:inline;">
+          <i class="fa fa-instagram" style="font-size:24px"></i>
+      </div>
+
+      <div id="footer-link" style="display:inline; white-space:nowrap;">
+        <a class="footer-link" href="https://www.instagram.com/drawntowildplaces/">Instagram</a></p>
+      </div>
+      <hr> </div> 
   </div>
 
 
   <div class="bottom-container">
-    <h3>Social</h3>
-    <div id="social_container" style="white-space:nowrap">
-
-    <div id="social_image" style="display:inline;">
-        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-    </div>
-
-    <div id="footer-link" style="display:inline; white-space:nowrap;">
-      <a class="footer-link" href="https://www.linkedin.com/in/codewitty/">LinkedIn</a>
-    </div>
-    <br>
-
-    <div id="social_image" style="display:inline;">
-        <i class="fa fa-github" style="font-size:24px"></i>
-    </div>
-
-    <div id="footer-link" style="display:inline; white-space:nowrap;">
-      <a class="footer-link" href="https://github.com/codewitty">Github</a>
-    </div>
-    <br>
-
-    <div id="social_image" style="display:inline;">
-        <i class="fa fa-instagram" style="font-size:24px"></i>
-    </div>
-
-    <div id="footer-link" style="display:inline; white-space:nowrap;">
-      <a class="footer-link" href="https://www.instagram.com/drawntowildplaces/">Instagram</a></p>
-    </div>
 
  </div>
+ <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
 
 </body>
 
