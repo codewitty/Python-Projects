@@ -3,6 +3,8 @@ from pathlib import Path
 
 SUBDIRECTORIES = {
     "jpeg": ['.JPG','.jpg'],
+    "HEIC": ['.heic', '.HEIC'],
+    "MOV": ['.mov', '.MOV'],
     "RAW":['.CR2','.CR3','.dng','.cr3'],
 }
 
